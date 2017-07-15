@@ -17,13 +17,13 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    var placeAr = [["big cities", "Action Bike shot", "Golden Gate"],["big cities", "Action Bike shot", "Golden Gate"],["big cities", "Action Bike shot", "Golden Gate"]]
+    var placeAr = [["Big Cities", "Action Bike shot", "Golden Gate"],["big cities", "Action Bike shot", "Golden Gate"],["big cities", "Action Bike shot", "Golden Gate"]]
     var companyAr = [["Apple", "Google", "Chegg"],["Apple", "Google", "Chegg"],["Apple", "Google", "Chegg"]]
     var priceAr = [["$999", "$100", "$750"],["$999", "$100", "$750"],["$999", "$100", "$750"]]
     var timeLeftAr = [["5 days","8 days","10 days"],["3 days","2 days","1 days"],["13 days","11 days","04 days"]]
     var imageViewAr = [[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")],[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")],[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")]]
     
-    func configure(row:Int, cell:Int) {
+    func configure(row:Int, cell:Int, user:UserType) {
         print("configuring")
         company.text = companyAr[row][cell]
         place.text = placeAr[row][cell]
