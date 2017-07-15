@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -45,9 +45,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
             }
             
         }
+        SVProgressHUD.show()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            FirebaseManager.getNewEntryTrue()
+            print(FirebaseManager.newEntry)
+            SVProgressHUD.dismiss()
+        })
         
-        FirebaseManager.getNewEntryTrue()
-        print(FirebaseManager.newEntry)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

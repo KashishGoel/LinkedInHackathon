@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/ViewController.swift"
-            timestampString = "521834224.442153"
+            timestampString = "521835361.812352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/ViewController.swift"
-            timestampString = "521834224.442153"
+            timestampString = "521835361.812352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "HomeVC"
             landmarkType = "4">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/ViewController.swift"
-            timestampString = "521834224.442153"
+            timestampString = "521835361.812352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "HomeVC"
             landmarkType = "4">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/FirebaseManager.swift"
-            timestampString = "521834224.442153"
+            timestampString = "521835216.271723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "getNewEntryTrue()"
             landmarkType = "7">
             <Locations>
@@ -118,11 +118,138 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/ViewController.swift"
-            timestampString = "521834217.105185"
+            timestampString = "521835361.812352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackLinkedIn/FirebaseManager.swift"
+            timestampString = "521835216.271723"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "getNewEntryTrue()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HackLinkedIn.FirebaseManager.(getNewEntryTrue () -&gt; ()).(closure #1)"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/FirebaseManager.swift"
+                  timestampString = "521834546.624947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "471">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HackLinkedIn.FirebaseManager.(getNewEntryTrue () -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/FirebaseManager.swift"
+                  timestampString = "521834546.626775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackLinkedIn/FirebaseManager.swift"
+            timestampString = "521835216.271723"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "getNewEntryTrue()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HackLinkedIn.FirebaseManager.getNewEntryTrue () -&gt; ()"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/FirebaseManager.swift"
+                  timestampString = "521834580.718714"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HackLinkedIn.FirebaseManager.(getNewEntryTrue () -&gt; ()).(closure #1)"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/FirebaseManager.swift"
+                  timestampString = "521834580.720398"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "1317">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HackLinkedIn.FirebaseManager.(getNewEntryTrue () -&gt; ()).(closure #2)"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/FirebaseManager.swift"
+                  timestampString = "521834580.721967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackLinkedIn/ViewController.swift"
+            timestampString = "521835361.812352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -138,13 +265,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackLinkedIn/ViewController.swift"
-            timestampString = "521834222.732053"
+            timestampString = "521835350.382322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackLinkedIn/ViewController.swift"
+            timestampString = "521835351.325427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackLinkedIn.HomeVC.viewWillAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/ViewController.swift"
+                  timestampString = "521835362.929855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackLinkedIn.HomeVC.(viewWillAppear (Swift.Bool) -&gt; ()).(closure #2)"
+                  moduleName = "HackLinkedIn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kashishgoel/Projects/HackLinkedIn/HackLinkedIn/ViewController.swift"
+                  timestampString = "521835362.931734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

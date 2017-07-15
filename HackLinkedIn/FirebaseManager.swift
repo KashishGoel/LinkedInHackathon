@@ -111,6 +111,7 @@ class FirebaseManager {
     
     static func setNewEntryTrue() {
         FirebaseNodes.newEntry.setValue(true)
+        FirebaseManager.getNewEntryTrue()
     }
     
     static func getNewEntryTrue() {

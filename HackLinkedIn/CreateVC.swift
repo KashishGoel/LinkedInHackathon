@@ -43,7 +43,7 @@ class MyFormViewController: FormViewController {
             <<< SliderRow() {
                 $0.title = "Badge Level"
                 $0.maximumValue = 5.0
-                $0.value = 1.0
+                $0.value = 1.0 
         }
         
         form +++ SelectableSection<ListCheckRow<String>>("Device", selectionType: .singleSelection(enableDeselection: true))
