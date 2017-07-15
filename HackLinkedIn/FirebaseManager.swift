@@ -53,7 +53,7 @@ class FirebaseManager {
         }
     }
     
-    static func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+    static func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[String]) {
         let data: [String:Any] = [
             "description":description,
             "image": image,
@@ -79,7 +79,7 @@ class FirebaseManager {
         FirebaseNodes.bought.childByAutoId().setValue(data)
     }
     
-    static func addImageToUserPortfolio(date:Int,id:Int,tags:[Tag],url:String) {
+    static func addImageToUserPortfolio(date:Int,id:Int,tags:[String],url:String) {
         let data:[String:Any] = [
             "date": date,
             "id": id,
@@ -90,6 +90,9 @@ class FirebaseManager {
         FirebaseNodes.images.childByAutoId().setValue(data)
     }
     
+    static func getAllRequests() {
+        
+    }
     
     
 }
