@@ -15,7 +15,7 @@ class FirebaseManager {
         return FIRDatabase.database().reference()
     }
     
-    static func createAccount(name:String, email:String, pass:String, userType:UserType ) {
+    static func createAccount(name:String, email:String, pass:String, userType:UserType) {
         FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, err) in
             if err != nil {
                 print(err.debugDescription)
@@ -23,12 +23,37 @@ class FirebaseManager {
             
             if let user = user {
                 if userType == .business {
-                    FirebaseManager.ref.child("businesses").child(user.uid).setValue(["name": name, "id":UUID().uuidString])
+                    FirebaseNodes.businesses.child(user.uid).setValue(["name": name, "id":UUID().uuidString])
                 } else {
-                    FirebaseManager.ref.child("users").child(user.uid).setValue(["name": name, "id":UUID().uuidString])
+                    FirebaseNodes.users.child(user.uid).setValue(["name": name, "id":UUID().uuidString])
                 }
             }
         })
+    }
+    
+    private func signIn(name:String, email:String, pass:String, userType:UserType){
+        FIRAuth.auth()?.signIn(withEmail: email, password: pass) { (user, error) in
+            let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
+            
+            changeRequest?.displayName = name
+            changeRequest?.commitChanges(completion: { (err) in
+                if (err != nil) {
+                    print(err.debugDescription)
+                }
+            })
+        }
+    }
+    
+    private func createAuctionRequest(description:String, image:URL, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+        let data: [String:Any] = [
+            "description":description,
+            "image": image,
+            "public": makePublic,
+            "trawl": trawl,
+            "price": price,
+            "tags": tags
+        ]
+        FirebaseNodes.requests.child(UUID().uuidString).setValue(data)
     }
 }
 
