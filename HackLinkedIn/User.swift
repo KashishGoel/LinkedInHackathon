@@ -1,5 +1,5 @@
 //
-//  FirebaseBusinessManager.swift
+//  User.swift
 //  HackLinkedIn
 //
 //  Created by Kashish Goel on 2017-07-15.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-class FirebaseBusinessManager:FirebaseManager {
+class User {
+    var name:String?
+    var id:String?
+    
     
 }
