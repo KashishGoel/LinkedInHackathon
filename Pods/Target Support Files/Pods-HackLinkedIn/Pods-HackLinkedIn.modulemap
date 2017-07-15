@@ -1,0 +1,6 @@
+framework module Pods_HackLinkedIn {
+  umbrella header "Pods-HackLinkedIn-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -30,7 +30,8 @@ class AuctionCollectionViewCell: UICollectionViewCell {
         timeLeft.text = companyAr[row][cell]
         imageView.image = imageViewAr[row][cell]
         price.text = priceAr[row][cell]
-        
     }
+    
+    
 
 }

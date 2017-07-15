@@ -31,7 +31,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
     var lastOffset = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+    
         
         if user == .business {
             discoverButton.titleLabel?.text = "Categories"
@@ -47,6 +47,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
     }
     
 
+    @IBAction func companiesButtonPressed(_ sender: UIButton) {
+        guard self.user == .business else {
+            return
+        }
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContainerVCID")
+        self.present(vc!, animated: false, completion: nil)
+    }
 
 
 }
@@ -60,7 +67,7 @@ extension HomeVC {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         if let cell = tableView.dequeueReusableCell(withIdentifier: LocalizedText.collectionTableCellID) as? AuctionTableViewCell {
-                cell.configure(row: indexPath.row)
+                cell.configure(row: indexPath.row, user: user!)
             return cell
         } else {
             return UITableViewCell()
@@ -115,8 +122,5 @@ extension HomeVC {
 
 
 extension HomeVC {
-    fileprivate func setup(){
-//        let nib = UINib(nibName: LocalizedText.collectionTableCell, bundle: nil)
-//        self.tableView.register(nib, forCellReuseIdentifier: LocalizedText.collectionTableCellID)
-    }
+    
 }
