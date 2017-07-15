@@ -14,6 +14,13 @@
 		36867A931F19DD0500F26D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36867A921F19DD0500F26D9C /* Assets.xcassets */; };
 		36867A961F19DD0500F26D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36867A941F19DD0500F26D9C /* LaunchScreen.storyboard */; };
 		36867AA41F19DF5B00F26D9C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */; };
+		36867AA81F19EB0B00F26D9C /* LocalizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA71F19EB0B00F26D9C /* LocalizedText.swift */; };
+		36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA91F19EB4300F26D9C /* FirebaseManager.swift */; };
+		36867AAC1F19F60B00F26D9C /* Extensions+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */; };
+		36867AB01F19FB2600F26D9C /* FirebaseNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AAF1F19FB2600F26D9C /* FirebaseNodes.swift */; };
+		36867AB31F19FF9800F26D9C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB21F19FF9800F26D9C /* Tag.swift */; };
+		36867AB51F1A059F00F26D9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB41F1A059F00F26D9C /* User.swift */; };
+		36867AB71F1A1C2F00F26D9C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB61F1A1C2F00F26D9C /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		36867A951F19DD0500F26D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36867A971F19DD0500F26D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		36867AA71F19EB0B00F26D9C /* LocalizedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedText.swift; sourceTree = "<group>"; };
+		36867AA91F19EB4300F26D9C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Enums.swift"; sourceTree = "<group>"; };
+		36867AAF1F19FB2600F26D9C /* FirebaseNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseNodes.swift; sourceTree = "<group>"; };
+		36867AB21F19FF9800F26D9C /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		36867AB41F1A059F00F26D9C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		36867AB61F1A1C2F00F26D9C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
 		F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackLinkedIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +86,7 @@
 		36867A8A1F19DD0500F26D9C /* HackLinkedIn */ = {
 			isa = PBXGroup;
 			children = (
+				36867AB11F19FF9100F26D9C /* Model */,
 				36867AA21F19DE6700F26D9C /* Helpers */,
 				36867A8B1F19DD0500F26D9C /* AppDelegate.swift */,
 				36867AA11F19DDBA00F26D9C /* Flow Managers */,
@@ -119,8 +134,30 @@
 		36867AA21F19DE6700F26D9C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				36867AA61F19EA6400F26D9C /* Firebase */,
+				36867AA71F19EB0B00F26D9C /* LocalizedText.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		36867AA61F19EA6400F26D9C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				36867AA91F19EB4300F26D9C /* FirebaseManager.swift */,
+				36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */,
+				36867AAF1F19FB2600F26D9C /* FirebaseNodes.swift */,
+			);
+			name = Firebase;
+			sourceTree = "<group>";
+		};
+		36867AB11F19FF9100F26D9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36867AB21F19FF9800F26D9C /* Tag.swift */,
+				36867AB41F1A059F00F26D9C /* User.swift */,
+				36867AB61F1A1C2F00F26D9C /* Request.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D471819541F4BE61913A5235 /* Frameworks */ = {
@@ -256,8 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36867AB31F19FF9800F26D9C /* Tag.swift in Sources */,
+				36867AB01F19FB2600F26D9C /* FirebaseNodes.swift in Sources */,
+				36867AA81F19EB0B00F26D9C /* LocalizedText.swift in Sources */,
 				36867A8E1F19DD0500F26D9C /* ViewController.swift in Sources */,
+				36867AB51F1A059F00F26D9C /* User.swift in Sources */,
+				36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */,
 				36867A8C1F19DD0500F26D9C /* AppDelegate.swift in Sources */,
+				36867AB71F1A1C2F00F26D9C /* Request.swift in Sources */,
+				36867AAC1F19F60B00F26D9C /* Extensions+Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
