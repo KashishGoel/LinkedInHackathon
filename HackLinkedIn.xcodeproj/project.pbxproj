@@ -55,13 +55,45 @@
 			isa = PBXGroup;
 			children = (
 				36867A8B1F19DD0500F26D9C /* AppDelegate.swift */,
-				36867A8D1F19DD0500F26D9C /* ViewController.swift */,
-				36867A8F1F19DD0500F26D9C /* Main.storyboard */,
+				36867AA11F19DDBA00F26D9C /* Flow Managers */,
+				36867A9F1F19DDAA00F26D9C /* View Controllers */,
+				36867A9E1F19DDA300F26D9C /* Storyboards */,
+				36867A9D1F19DD9D00F26D9C /* Resources */,
+			);
+			path = HackLinkedIn;
+			sourceTree = "<group>";
+		};
+		36867A9D1F19DD9D00F26D9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				36867A921F19DD0500F26D9C /* Assets.xcassets */,
 				36867A941F19DD0500F26D9C /* LaunchScreen.storyboard */,
 				36867A971F19DD0500F26D9C /* Info.plist */,
 			);
-			path = HackLinkedIn;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		36867A9E1F19DDA300F26D9C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				36867A8F1F19DD0500F26D9C /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		36867A9F1F19DDAA00F26D9C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36867A8D1F19DD0500F26D9C /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		36867AA11F19DDBA00F26D9C /* Flow Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Flow Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +336,7 @@
 				36867A9C1F19DD0500F26D9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
