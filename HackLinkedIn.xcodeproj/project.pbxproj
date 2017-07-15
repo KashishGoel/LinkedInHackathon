@@ -20,6 +20,7 @@
 		36867AB01F19FB2600F26D9C /* FirebaseNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AAF1F19FB2600F26D9C /* FirebaseNodes.swift */; };
 		36867AB31F19FF9800F26D9C /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB21F19FF9800F26D9C /* Tag.swift */; };
 		36867AB51F1A059F00F26D9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB41F1A059F00F26D9C /* User.swift */; };
+		36867AB71F1A1C2F00F26D9C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AB61F1A1C2F00F26D9C /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		36867AAF1F19FB2600F26D9C /* FirebaseNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseNodes.swift; sourceTree = "<group>"; };
 		36867AB21F19FF9800F26D9C /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		36867AB41F1A059F00F26D9C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		36867AB61F1A1C2F00F26D9C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
 		F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackLinkedIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				36867AB21F19FF9800F26D9C /* Tag.swift */,
 				36867AB41F1A059F00F26D9C /* User.swift */,
+				36867AB61F1A1C2F00F26D9C /* Request.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				36867AB51F1A059F00F26D9C /* User.swift in Sources */,
 				36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */,
 				36867A8C1F19DD0500F26D9C /* AppDelegate.swift in Sources */,
+				36867AB71F1A1C2F00F26D9C /* Request.swift in Sources */,
 				36867AAC1F19F60B00F26D9C /* Extensions+Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

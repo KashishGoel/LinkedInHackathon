@@ -68,7 +68,7 @@ class FirebaseManager {
         FirebaseNodes.requests.child(request.key).setValue(data)
     }
     
-    static func createBoughtItem(date:Int, image: String, price:Int, seller:User){
+    static func createBoughtItem(date:Int, image: String, price:Int, seller:[String:Any]){
         let data:[String:Any] = [
             "date":date,
             "image":image,
@@ -90,8 +90,22 @@ class FirebaseManager {
         FirebaseNodes.images.childByAutoId().setValue(data)
     }
     
-    static func getAllRequests() {
-        
+    static func getBusinessRequests() -> [Request] {
+        let userID = FirebaseManager.currentUserID
+        var requests:[Request] = []
+        FirebaseNodes.requests.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let requestDictionary = snap.value as? Dictionary <String,AnyObject> {
+                        let request = Request(requestDictionary: requestDictionary)
+                        requests.append(request)
+                    }
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        return requests
     }
     
     
