@@ -16,4 +16,3 @@ enum TabButton {
     case location
     case companies
 }
-
