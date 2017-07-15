@@ -89,10 +89,10 @@ extension AuctionTableViewCell {
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
         self.row = row
         self.collectionView.tag = row
-        if (user == .consumer) {
-            self.header.text = featureAr[row]
-        } else {
+        if (user == UserType.business) {
             self.header.text = bizFeatureAr[row]
+        } else {
+            self.header.text = featureAr[row]
         }
         self.collectionView.reloadData()
     }

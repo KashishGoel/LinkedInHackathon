@@ -48,11 +48,7 @@ class ContestDetailsVC:UIViewController, UICollectionViewDataSource,UICollection
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocalizedText.collectionCellID, for: indexPath) as? AuctionCollectionViewCell {
             
             print("configuring cells")
-            if (user == .business) {
                 cell.configure(row: collectionView.tag , cell: indexPath.row, user:UserType.business)
-            } else {
-                cell.configure(row: collectionView.tag , cell: indexPath.row, user:UserType.consumer)
-            }
             
             return cell
         } else {
