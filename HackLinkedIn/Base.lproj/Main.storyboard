@@ -261,7 +261,7 @@
                                                                         <color key="textColor" red="0.15686274510000001" green="0.72156862749999995" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-gD-6xv">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-gD-6xv">
                                                                         <rect key="frame" x="0.0" y="20" width="120" height="180"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="180" id="2Ro-id-Ege"/>
