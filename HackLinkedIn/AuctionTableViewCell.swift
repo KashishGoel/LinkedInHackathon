@@ -19,6 +19,7 @@ class AuctionTableViewCell: UITableViewCell {
     var companyAr = ["Apple", "Google", "Chegg"]
     var priceAr = ["$999", "$100", "$750"]
     var timeLeftAr = ["5 days","8 days","10 days"]
+    var featureAr = ["Featured", "Recommended", "New"]
     var imageViewAr = [UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")]
 
     
@@ -78,13 +79,13 @@ class AuctionTableViewCell: UITableViewCell {
 //}
 
 extension AuctionTableViewCell {
-    func configure(row:Int) {
+    func configure(row:Int, user:UserType) {
 //        let nib = UINib(nibName: LocalizedText.collectionCell, bundle: nil)
 //        //collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
         self.row = row
         self.collectionView.tag = row
-        self.header.text = placeAr[row]
+        self.header.text = featureAr[row]
         self.collectionView.reloadData()
     }
 }
