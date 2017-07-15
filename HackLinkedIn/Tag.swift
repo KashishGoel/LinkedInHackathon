@@ -9,9 +9,9 @@
 import Foundation
 
 class Tag {
-    var tag:String?
+    var tag:NSString?
     
-    init(tagName:String) {
+    init(tagName:NSString) {
         self.tag = tagName
     }
 }

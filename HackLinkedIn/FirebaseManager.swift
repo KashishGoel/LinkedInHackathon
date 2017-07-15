@@ -31,7 +31,7 @@ class FirebaseManager {
         })
     }
     
-    private func signIn(name:String, email:String, pass:String, userType:UserType){
+    static func signIn(name:String, email:String, pass:String, userType:UserType){
         FIRAuth.auth()?.signIn(withEmail: email, password: pass) { (user, error) in
             let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
             
@@ -44,7 +44,7 @@ class FirebaseManager {
         }
     }
     
-    private func createAuctionRequest(description:String, image:URL, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+    static func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[String]) {
         let data: [String:Any] = [
             "description":description,
             "image": image,
