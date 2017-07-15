@@ -14,6 +14,9 @@
 		36867A931F19DD0500F26D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36867A921F19DD0500F26D9C /* Assets.xcassets */; };
 		36867A961F19DD0500F26D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36867A941F19DD0500F26D9C /* LaunchScreen.storyboard */; };
 		36867AA41F19DF5B00F26D9C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */; };
+		36867AA81F19EB0B00F26D9C /* LocalizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA71F19EB0B00F26D9C /* LocalizedText.swift */; };
+		36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AA91F19EB4300F26D9C /* FirebaseManager.swift */; };
+		36867AAC1F19F60B00F26D9C /* Extensions+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		36867A951F19DD0500F26D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36867A971F19DD0500F26D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		36867AA71F19EB0B00F26D9C /* LocalizedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedText.swift; sourceTree = "<group>"; };
+		36867AA91F19EB4300F26D9C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Enums.swift"; sourceTree = "<group>"; };
 		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
 		F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackLinkedIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,8 +125,19 @@
 		36867AA21F19DE6700F26D9C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				36867AA61F19EA6400F26D9C /* Firebase */,
+				36867AA71F19EB0B00F26D9C /* LocalizedText.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		36867AA61F19EA6400F26D9C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				36867AA91F19EB4300F26D9C /* FirebaseManager.swift */,
+				36867AAB1F19F60B00F26D9C /* Extensions+Enums.swift */,
+			);
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 		D471819541F4BE61913A5235 /* Frameworks */ = {
@@ -256,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36867AA81F19EB0B00F26D9C /* LocalizedText.swift in Sources */,
 				36867A8E1F19DD0500F26D9C /* ViewController.swift in Sources */,
+				36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */,
 				36867A8C1F19DD0500F26D9C /* AppDelegate.swift in Sources */,
+				36867AAC1F19F60B00F26D9C /* Extensions+Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
