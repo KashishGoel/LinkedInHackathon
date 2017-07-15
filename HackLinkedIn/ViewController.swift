@@ -26,10 +26,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
     
     
     @IBOutlet weak var label: UILabel!
+    
+    var user:UserType?
     var lastOffset = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        if user == .business {
+            discoverButton.titleLabel?.text = "Categories"
+            companiesButton.titleLabel?.text = "Create"
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

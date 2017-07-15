@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tPH-eF-Im3">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +12,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--InitialVC-->
+        <scene sceneID="Rko-yk-iT9">
+            <objects>
+                <viewController id="tPH-eF-Im3" customClass="InitialVC" customModule="HackLinkedIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ydc-y6-le0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZu-Wq-GID"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A7t-xf-waJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odp-UD-7YY" customClass="MaterialButton" customModule="HackLinkedIn" customModuleProvider="target">
+                                <rect key="frame" x="48" y="223.5" width="279" height="60"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.72156862749999995" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6AP-rb-aIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="User">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="userBtn:" destination="tPH-eF-Im3" eventType="touchUpInside" id="IUg-6h-OVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTV-kQ-anX" customClass="MaterialButton" customModule="HackLinkedIn" customModuleProvider="target">
+                                <rect key="frame" x="48" y="383.5" width="279" height="60"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.72156862749999995" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wm8-E3-4rR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Business">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bizBtn:" destination="tPH-eF-Im3" eventType="touchUpInside" id="SQv-2H-UEc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DTV-kQ-anX" secondAttribute="trailing" constant="32" id="A4l-q8-ngl"/>
+                            <constraint firstItem="DTV-kQ-anX" firstAttribute="centerY" secondItem="A7t-xf-waJ" secondAttribute="centerY" constant="80" id="Bgu-bb-u5y"/>
+                            <constraint firstItem="odp-UD-7YY" firstAttribute="centerX" secondItem="A7t-xf-waJ" secondAttribute="centerX" id="PV9-aB-os9"/>
+                            <constraint firstItem="odp-UD-7YY" firstAttribute="centerY" secondItem="A7t-xf-waJ" secondAttribute="centerY" constant="-80" id="Pke-d1-A8w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="odp-UD-7YY" secondAttribute="trailing" constant="32" id="cJS-sV-z0T"/>
+                            <constraint firstItem="DTV-kQ-anX" firstAttribute="leading" secondItem="A7t-xf-waJ" secondAttribute="leadingMargin" constant="32" id="khO-br-Ii3"/>
+                            <constraint firstItem="odp-UD-7YY" firstAttribute="leading" secondItem="A7t-xf-waJ" secondAttribute="leadingMargin" constant="32" id="qZV-3S-3Yd"/>
+                            <constraint firstItem="DTV-kQ-anX" firstAttribute="centerX" secondItem="A7t-xf-waJ" secondAttribute="centerX" id="vtM-Uf-bLc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0p-9f-Enb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631" y="143"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeVC" customModule="HackLinkedIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVCID" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeVC" customModule="HackLinkedIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

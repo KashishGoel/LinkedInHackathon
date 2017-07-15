@@ -79,7 +79,7 @@ class AuctionTableViewCell: UITableViewCell {
 //}
 
 extension AuctionTableViewCell {
-    func configure(row:Int) {
+    func configure(row:Int, user:UserType) {
 //        let nib = UINib(nibName: LocalizedText.collectionCell, bundle: nil)
 //        //collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
