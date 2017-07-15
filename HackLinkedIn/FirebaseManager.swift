@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class FirebaseManager {
+    static var newEntry = false
     static var currentUserID: String {
         get {
             if let currentUser = FIRAuth.auth()?.currentUser {
@@ -108,6 +109,21 @@ class FirebaseManager {
         return requests
     }
     
+    static func setNewEntryTrue() {
+        FirebaseNodes.newEntry.setValue(true)
+    }
+    
+    static func getNewEntryTrue() {
+        let userID = FirebaseManager.currentUserID
+        FirebaseManager.ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            FirebaseManager.newEntry = value?["showNewEntry"] as? Bool ?? false
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+
+    }
     
 }
 

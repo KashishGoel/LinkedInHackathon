@@ -33,14 +33,22 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
         super.viewDidLoad()
     
         
-        if user == .business {
-            discoverButton.titleLabel?.text = "Categories"
-            companiesButton.titleLabel?.text = "Create"
-        }
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if user == .business {
+            DispatchQueue.main.async {
+                self.companiesButton.titleLabel?.text = "Create"
+            }
+            
+        }
+        
+        FirebaseManager.getNewEntryTrue()
+        print(FirebaseManager.newEntry)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

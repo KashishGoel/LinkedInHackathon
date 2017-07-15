@@ -10,10 +10,7 @@ import Foundation
 import UIKit
 class ContainerVC:UIViewController {
 
-    @IBAction func createBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCreateVC" {
             
@@ -23,5 +20,14 @@ class ContainerVC:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func discoverBtnPress(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func createBtnPress(_ sender: UIButton) {
+        FirebaseManager.setNewEntryTrue()
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 }
 

@@ -57,6 +57,31 @@ class MyFormViewController: FormViewController {
             }
         }
         
+        form +++ Section("Legal")
+        <<< TextRow(){ row in
+                row.title = "Use case"
+                row.placeholder = "Example: Ads"
+        }
+        
+        <<< TextRow(){ row in
+                row.title = "Time"
+                row.placeholder = "Ex. 1 month"
+        }
+        
+        form +++ SelectableSection<ListCheckRow<String>>("Do you keep ownership?", selectionType: .singleSelection(enableDeselection: true))
+        
+        let yesno = ["Yes", "No"]
+        for option in yesno {
+            form.last! <<< ListCheckRow<String>(option){ listRow in
+                listRow.title = option
+                listRow.selectableValue = option
+                listRow.value = nil
+            }
+        }
+        
+        
+        
+        
         
     }
 }

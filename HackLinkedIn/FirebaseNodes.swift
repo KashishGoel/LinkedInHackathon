@@ -18,4 +18,6 @@ class FirebaseNodes {
     static let bought = FirebaseNodes.businesses.child(FirebaseManager.currentUserID).child("bought")
     static let images = FirebaseNodes.businesses.child(FirebaseManager.currentUserID).child("images")
     
+    static let newEntry = FirebaseManager.ref.child("showNewEntry")
+    
 }
