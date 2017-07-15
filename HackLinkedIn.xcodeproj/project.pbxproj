@@ -29,6 +29,7 @@
 		36867AC41F1A457400F26D9C /* arrow_back_grey_192x192.png in Resources */ = {isa = PBXBuildFile; fileRef = 36867AC31F1A457400F26D9C /* arrow_back_grey_192x192.png */; };
 		36867AC61F1A49A200F26D9C /* UIButton+HL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AC51F1A49A200F26D9C /* UIButton+HL.swift */; };
 		36867AC81F1A52CE00F26D9C /* ContestDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867AC71F1A52CE00F26D9C /* ContestDetailsVC.swift */; };
+		36E6F35C1F1A73410022DA08 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6F35B1F1A73410022DA08 /* Initial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		36867AC31F1A457400F26D9C /* arrow_back_grey_192x192.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_back_grey_192x192.png; sourceTree = "<group>"; };
 		36867AC51F1A49A200F26D9C /* UIButton+HL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+HL.swift"; sourceTree = "<group>"; };
 		36867AC71F1A52CE00F26D9C /* ContestDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDetailsVC.swift; sourceTree = "<group>"; };
+		36E6F35B1F1A73410022DA08 /* Initial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
 		F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackLinkedIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			children = (
 				36867A8D1F19DD0500F26D9C /* ViewController.swift */,
 				36867AC71F1A52CE00F26D9C /* ContestDetailsVC.swift */,
+				36E6F35B1F1A73410022DA08 /* Initial.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				36867AB01F19FB2600F26D9C /* FirebaseNodes.swift in Sources */,
 				36867AA81F19EB0B00F26D9C /* LocalizedText.swift in Sources */,
 				36867A8E1F19DD0500F26D9C /* ViewController.swift in Sources */,
+				36E6F35C1F1A73410022DA08 /* Initial.swift in Sources */,
 				36867AB51F1A059F00F26D9C /* User.swift in Sources */,
 				36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */,
 				36867A8C1F19DD0500F26D9C /* AppDelegate.swift in Sources */,

@@ -83,13 +83,13 @@ class AuctionTableViewCell: UITableViewCell {
 //}
 
 extension AuctionTableViewCell {
-    func configure(row:Int, user:Bool) {
+    func configure(row:Int, cell: Int, user:UserType) {
 //        let nib = UINib(nibName: LocalizedText.collectionCell, bundle: nil)
 //        //collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
         self.row = row
         self.collectionView.tag = row
-        if (user) {
+        if (user == .consumer) {
             self.header.text = featureAr[row]
         } else {
             self.header.text = bizFeatureAr[row]

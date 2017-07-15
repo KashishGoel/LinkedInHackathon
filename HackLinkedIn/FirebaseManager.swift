@@ -20,6 +20,8 @@ class FirebaseManager {
         }
     }
     
+    static var currentUserType: UserType? = nil
+    
     static var ref: FIRDatabaseReference {
         return FIRDatabase.database().reference()
     }
@@ -36,6 +38,8 @@ class FirebaseManager {
                 } else {
                     FirebaseNodes.users.child(user.uid).setValue(["name": name, "id":UUID().uuidString])
                 }
+                currentUserType = userType
+                print(currentUserType)
             }
         })
     }

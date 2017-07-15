@@ -27,15 +27,17 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
     
     
     @IBOutlet weak var label: UILabel!
-    var lastOffset = CGPoint(x: 0, y: 0)
+    
     var user:UserType?
+    var lastOffset = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        FirebaseManager.createAccount(name: "Justin Sucks", email: "test12@gmail.com", pass: "linkedin", userType: .business)
+        if user == .business {
+            discoverButton.titleLabel?.text = "Categories"
+            companiesButton.titleLabel?.text = "Create"
+        }
         // Do any additional setup after loading the view, typically from a nib.
-        print("jam")
-        print(currentUser)
 
     }
 
@@ -55,9 +57,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
 extension HomeVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (currentUser == nil || currentUser == .consumer) {
-            currentUser = UserType.consumer
-            return 2
+        if (user == UserType.consumer) {
+            return 3
         } else {
             return 2
         }
@@ -66,7 +67,7 @@ extension HomeVC {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         if let cell = tableView.dequeueReusableCell(withIdentifier: LocalizedText.collectionTableCellID) as? AuctionTableViewCell {
-            cell.configure(row: indexPath.row, user:false)
+            cell.configure(row: indexPath.row, cell: cell, user:user)
             return cell
         } else {
             return UITableViewCell()
@@ -95,8 +96,7 @@ extension HomeVC {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return 3
-        if (currentUser == nil || currentUser == .consumer) {
-            currentUser = UserType.consumer
+        if (user == UserType.consumer) {
             return 3
         } else {
             return 2
@@ -112,11 +112,7 @@ extension HomeVC {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocalizedText.collectionCellID, for: indexPath) as? AuctionCollectionViewCell {
             
             print("configuring cells")
-            var type = true
-            if (currentUser == .business) {
-                type = false
-            }
-            cell.configure(row: collectionView.tag , cell: indexPath.row, user: type)
+            cell.configure(row: collectionView.tag , cell: indexPath.row, user: user!)
             
             return cell
         } else {

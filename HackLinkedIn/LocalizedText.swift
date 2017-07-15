@@ -23,4 +23,6 @@ class LocalizedText: NSObject {
     static let collectionCellID = NSLocalizedString("collectionCellID", comment: "")
     
     static let contestDetailsVCID = NSLocalizedString("contestDetailsVCID", comment: "")
+    
+    static let homeVCID = NSLocalizedString("homeVCID", comment: "")
 }

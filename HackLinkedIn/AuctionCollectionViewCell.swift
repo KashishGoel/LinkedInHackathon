@@ -17,6 +17,7 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+
     var placeAr = [["Big Cities", "Action Bike shot", "Golden Gate"],["Learning in Class", "Clam Chowder", "Business Casual"],["Doctors and Medicine", "Long Distance Running", "Pair Programming"]]
     var companyAr = [["Apple", "Google", "Salesforce"],["Citi Bank", "Campbells", "GE"],["Stanford", "Google", "Udacity"]]
     var priceAr = [["$450", "$100", "$750"],["$500", "$100", "$300"],["$250", "$100", "$50"]]
@@ -29,22 +30,15 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     var bizPrice = [["$1000", "$700"], ["$200", "$700"]]
     var businessReqs = ["Big Cities", "Man's Best Friend", "Fruit Smoothies", "Summer Beach Day"]
     
-    func configure(row:Int, cell:Int, user:Bool) {
-        if (user) {
-            print("configuring")
-            company.text = companyAr[row][cell]
-            place.text = placeAr[row][cell]
-            timeLeft.text = timeLeftAr[row][cell]
-            imageView.image = imageViewAr[row][cell]
-            companyLogo.image = companyLogoAr[row][cell]
-            price.text = priceAr[row][cell]
-        } else {
-                company.text = bizCompanyAr[row][cell];
-                place.text = bizNameArr[row][cell];
-                timeLeft.text = bizTimeLeft[row][cell];
-                imageView.image = imageViewAr[row][cell]
-                price.text = bizPrice[row][cell];
-        }
+    func configure(row:Int, cell:Int, user:UserType) {
+        print("configuring")
+        company.text = companyAr[row][cell]
+        place.text = placeAr[row][cell]
+        timeLeft.text = timeLeftAr[row][cell]
+        imageView.image = imageViewAr[row][cell]
+        companyLogo.image = companyLogoAr[row][cell]
+        price.text = priceAr[row][cell]
+        
     }
-
+ 
 }
