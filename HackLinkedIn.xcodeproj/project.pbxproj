@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A18141C3C2CD9A88B734ACE /* libPods-HackLinkedIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */; };
 		36867A8C1F19DD0500F26D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867A8B1F19DD0500F26D9C /* AppDelegate.swift */; };
 		36867A8E1F19DD0500F26D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36867A8D1F19DD0500F26D9C /* ViewController.swift */; };
 		36867A911F19DD0500F26D9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36867A8F1F19DD0500F26D9C /* Main.storyboard */; };
 		36867A931F19DD0500F26D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36867A921F19DD0500F26D9C /* Assets.xcassets */; };
 		36867A961F19DD0500F26D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36867A941F19DD0500F26D9C /* LaunchScreen.storyboard */; };
+		36867AA41F19DF5B00F26D9C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FA26C40E74ED1C4210423D5 /* Pods-HackLinkedIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.debug.xcconfig"; sourceTree = "<group>"; };
 		36867A881F19DD0500F26D9C /* HackLinkedIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackLinkedIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36867A8B1F19DD0500F26D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36867A8D1F19DD0500F26D9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		36867A921F19DD0500F26D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36867A951F19DD0500F26D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36867A971F19DD0500F26D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
+		F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackLinkedIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A18141C3C2CD9A88B734ACE /* libPods-HackLinkedIn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		325A988D1410C94A68E8B25E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FA26C40E74ED1C4210423D5 /* Pods-HackLinkedIn.debug.xcconfig */,
+				5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		36867A7F1F19DD0400F26D9C = {
 			isa = PBXGroup;
 			children = (
 				36867A8A1F19DD0500F26D9C /* HackLinkedIn */,
 				36867A891F19DD0500F26D9C /* Products */,
+				325A988D1410C94A68E8B25E /* Pods */,
+				D471819541F4BE61913A5235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +72,7 @@
 		36867A8A1F19DD0500F26D9C /* HackLinkedIn */ = {
 			isa = PBXGroup;
 			children = (
+				36867AA21F19DE6700F26D9C /* Helpers */,
 				36867A8B1F19DD0500F26D9C /* AppDelegate.swift */,
 				36867AA11F19DDBA00F26D9C /* Flow Managers */,
 				36867A9F1F19DDAA00F26D9C /* View Controllers */,
@@ -66,6 +85,7 @@
 		36867A9D1F19DD9D00F26D9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				36867AA31F19DF5B00F26D9C /* GoogleService-Info-2.plist */,
 				36867A921F19DD0500F26D9C /* Assets.xcassets */,
 				36867A941F19DD0500F26D9C /* LaunchScreen.storyboard */,
 				36867A971F19DD0500F26D9C /* Info.plist */,
@@ -96,6 +116,21 @@
 			name = "Flow Managers";
 			sourceTree = "<group>";
 		};
+		36867AA21F19DE6700F26D9C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D471819541F4BE61913A5235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2C52D27F9A0BFF8E90FC375 /* libPods-HackLinkedIn.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36867A9A1F19DD0500F26D9C /* Build configuration list for PBXNativeTarget "HackLinkedIn" */;
 			buildPhases = (
+				8E2FE566279A2DC55FE51018 /* [CP] Check Pods Manifest.lock */,
 				36867A841F19DD0500F26D9C /* Sources */,
 				36867A851F19DD0500F26D9C /* Frameworks */,
 				36867A861F19DD0500F26D9C /* Resources */,
+				54213B439FB9D448C2870BB9 /* [CP] Embed Pods Frameworks */,
+				1F8489CF9AD4C57E8807EA36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,11 +196,60 @@
 			files = (
 				36867A961F19DD0500F26D9C /* LaunchScreen.storyboard in Resources */,
 				36867A931F19DD0500F26D9C /* Assets.xcassets in Resources */,
+				36867AA41F19DF5B00F26D9C /* GoogleService-Info-2.plist in Resources */,
 				36867A911F19DD0500F26D9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F8489CF9AD4C57E8807EA36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54213B439FB9D448C2870BB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E2FE566279A2DC55FE51018 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36867A841F19DD0500F26D9C /* Sources */ = {
@@ -293,6 +380,7 @@
 		};
 		36867A9B1F19DD0500F26D9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA26C40E74ED1C4210423D5 /* Pods-HackLinkedIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4T2WX7C8C6;
@@ -306,6 +394,7 @@
 		};
 		36867A9C1F19DD0500F26D9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4T2WX7C8C6;
