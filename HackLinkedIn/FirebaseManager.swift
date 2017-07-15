@@ -11,6 +11,15 @@ import Firebase
 import FirebaseDatabase
 
 class FirebaseManager {
+    static var currentUserID: String {
+        get {
+            if let currentUser = FIRAuth.auth()?.currentUser {
+                return currentUser.uid
+            }
+            return UUID().uuidString
+        }
+    }
+    
     static var ref: FIRDatabaseReference {
         return FIRDatabase.database().reference()
     }
@@ -44,7 +53,7 @@ class FirebaseManager {
         }
     }
     
-    private func createAuctionRequest(description:String, image:URL, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+    private func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
         let data: [String:Any] = [
             "description":description,
             "image": image,
@@ -53,7 +62,32 @@ class FirebaseManager {
             "price": price,
             "tags": tags
         ]
-        FirebaseNodes.requests.child(UUID().uuidString).setValue(data)
+        FirebaseNodes.requests.childByAutoId().setValue(data)
     }
+    
+    private func createBoughtItem(date:Int, image: String, price:Int, seller:User){
+        let data:[String:Any] = [
+            "date":date,
+            "image":image,
+            "price":price,
+            "seller":seller
+        ]
+        
+        FirebaseNodes.bought.childByAutoId().setValue(data)
+    }
+    
+    private func addImageToUserPortfolio(date:Int,id:Int,tags:[Tag],url:String) {
+        let data:[String:Any] = [
+            "date": date,
+            "id": id,
+            "tags":[tag],
+            "url":url
+        ]
+        
+        FirebaseNodes.images.childByAutoId().setValue(data)
+    }
+    
+    
+    
 }
 
