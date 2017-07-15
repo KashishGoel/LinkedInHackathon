@@ -40,7 +40,7 @@ class FirebaseManager {
         })
     }
     
-    private func signIn(name:String, email:String, pass:String, userType:UserType){
+    static func signIn(name:String, email:String, pass:String, userType:UserType){
         FIRAuth.auth()?.signIn(withEmail: email, password: pass) { (user, error) in
             let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
             
@@ -53,7 +53,7 @@ class FirebaseManager {
         }
     }
     
-    private func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+    static func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
         let data: [String:Any] = [
             "description":description,
             "image": image,
@@ -62,10 +62,13 @@ class FirebaseManager {
             "price": price,
             "tags": tags
         ]
-        FirebaseNodes.requests.childByAutoId().setValue(data)
+        let request = FirebaseNodes.businessRequests.childByAutoId()
+        request.setValue(data)
+        
+        FirebaseNodes.requests.child(request.key).setValue(data)
     }
     
-    private func createBoughtItem(date:Int, image: String, price:Int, seller:User){
+    static func createBoughtItem(date:Int, image: String, price:Int, seller:User){
         let data:[String:Any] = [
             "date":date,
             "image":image,
@@ -76,11 +79,11 @@ class FirebaseManager {
         FirebaseNodes.bought.childByAutoId().setValue(data)
     }
     
-    private func addImageToUserPortfolio(date:Int,id:Int,tags:[Tag],url:String) {
+    static func addImageToUserPortfolio(date:Int,id:Int,tags:[Tag],url:String) {
         let data:[String:Any] = [
             "date": date,
             "id": id,
-            "tags":[tag],
+            "tags":tags,
             "url":url
         ]
         
