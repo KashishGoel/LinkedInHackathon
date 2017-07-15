@@ -22,8 +22,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var companiesButton: UIButton!
     @IBOutlet weak var companiesSeperator: UIView!
     
+    @IBOutlet weak var headerView: UIView!
+    var lastOffset = CGPoint(x: 0, y: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -55,11 +58,16 @@ extension HomeVC {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+    
 }
+
 
 extension HomeVC {
     fileprivate func setup(){
-        let nib = UINib(nibName: LocalizedText.collectionTableCell, bundle: Bundle.main)
+        let nib = UINib(nibName: LocalizedText.collectionTableCell, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: LocalizedText.collectionTableCellID)
     }
 }

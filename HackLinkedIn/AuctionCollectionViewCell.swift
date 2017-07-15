@@ -16,7 +16,8 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeLeft: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    func configure(row:Int) {
+    
+    func configure(row:Int, cell:Int) {
         
     }
 }

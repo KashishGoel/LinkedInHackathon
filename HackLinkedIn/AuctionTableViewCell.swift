@@ -15,6 +15,7 @@ class AuctionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var row = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -41,7 +42,7 @@ extension AuctionTableViewCell {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocalizedText.collectionCellID, for: indexPath) as? AuctionCollectionViewCell {
-            cell.configure(row: indexPath.row)
+            cell.configure(row: row, cell: indexPath.row)
             return cell
         } else {
             return UICollectionViewCell()
@@ -53,6 +54,8 @@ extension AuctionTableViewCell {
     func configure(row:Int) {
         let nib = UINib(nibName: LocalizedText.collectionCellID, bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
+        
+        self.row = row
     }
 }
 
