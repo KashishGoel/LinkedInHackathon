@@ -10,3 +10,10 @@ enum UserType {
     case business
     case consumer
 }
+
+enum TabButton {
+    case discover
+    case location
+    case companies
+}
+

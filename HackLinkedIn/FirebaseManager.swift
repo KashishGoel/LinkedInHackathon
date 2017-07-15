@@ -11,6 +11,15 @@ import Firebase
 import FirebaseDatabase
 
 class FirebaseManager {
+    static var currentUserID: String {
+        get {
+            if let currentUser = FIRAuth.auth()?.currentUser {
+                return currentUser.uid
+            }
+            return UUID().uuidString
+        }
+    }
+    
     static var ref: FIRDatabaseReference {
         return FIRDatabase.database().reference()
     }
@@ -31,7 +40,7 @@ class FirebaseManager {
         })
     }
     
-    private func signIn(name:String, email:String, pass:String, userType:UserType){
+    static func signIn(name:String, email:String, pass:String, userType:UserType){
         FIRAuth.auth()?.signIn(withEmail: email, password: pass) { (user, error) in
             let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
             
@@ -44,7 +53,7 @@ class FirebaseManager {
         }
     }
     
-    private func createAuctionRequest(description:String, image:URL, makePublic:Bool, trawl:Bool, price:Int,tags:[Tag]) {
+    static func createAuctionRequest(description:String, image:String, makePublic:Bool, trawl:Bool, price:Int,tags:[String]) {
         let data: [String:Any] = [
             "description":description,
             "image": image,
@@ -53,7 +62,52 @@ class FirebaseManager {
             "price": price,
             "tags": tags
         ]
-        FirebaseNodes.requests.child(UUID().uuidString).setValue(data)
+        let request = FirebaseNodes.businessRequests.childByAutoId()
+        request.setValue(data)
+        
+        FirebaseNodes.requests.child(request.key).setValue(data)
     }
+    
+    static func createBoughtItem(date:Int, image: String, price:Int, seller:[String:Any]){
+        let data:[String:Any] = [
+            "date":date,
+            "image":image,
+            "price":price,
+            "seller":seller
+        ]
+        
+        FirebaseNodes.bought.childByAutoId().setValue(data)
+    }
+    
+    static func addImageToUserPortfolio(date:Int,id:Int,tags:[String],url:String) {
+        let data:[String:Any] = [
+            "date": date,
+            "id": id,
+            "tags":tags,
+            "url":url
+        ]
+        
+        FirebaseNodes.images.childByAutoId().setValue(data)
+    }
+    
+    static func getBusinessRequests() -> [Request] {
+        let userID = FirebaseManager.currentUserID
+        var requests:[Request] = []
+        FirebaseNodes.requests.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let requestDictionary = snap.value as? Dictionary <String,AnyObject> {
+                        let request = Request(requestDictionary: requestDictionary)
+                        requests.append(request)
+                    }
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        return requests
+    }
+    
+    
 }
 
