@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12AF8959709317FBF20E1350D7CD79E6"
-               BuildableName = "Pods_HackLinkedIn.framework"
-               BlueprintName = "Pods-HackLinkedIn"
+               BlueprintIdentifier = "E0CFA427A1DAC7D723349A40CDB3D585"
+               BuildableName = "SVProgressHUD.framework"
+               BlueprintName = "SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "12AF8959709317FBF20E1350D7CD79E6"
-            BuildableName = "Pods_HackLinkedIn.framework"
-            BlueprintName = "Pods-HackLinkedIn"
+            BlueprintIdentifier = "E0CFA427A1DAC7D723349A40CDB3D585"
+            BuildableName = "SVProgressHUD.framework"
+            BlueprintName = "SVProgressHUD"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E0CFA427A1DAC7D723349A40CDB3D585"
+            BuildableName = "SVProgressHUD.framework"
+            BlueprintName = "SVProgressHUD"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

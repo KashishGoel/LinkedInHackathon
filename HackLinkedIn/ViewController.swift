@@ -74,7 +74,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
 extension HomeVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if (curUserType == UserType.consumer) {
+            return 3
+        } else {
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,7 +112,13 @@ extension HomeVC {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+        if (curUserType == UserType.consumer) {
+            return 3
+        } else {
+            return 2
+        }
+
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -21,6 +21,8 @@ class AuctionTableViewCell: UITableViewCell {
     var timeLeftAr = ["5 days","8 days","10 days"]
     var featureAr = ["Featured", "Recommended", "New"]
     var imageViewAr = [UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")]
+    
+    var bizHeader = ["Active", "Past Contests"]
 
     
     var row = 0
@@ -83,10 +85,16 @@ extension AuctionTableViewCell {
 //        let nib = UINib(nibName: LocalizedText.collectionCell, bundle: nil)
 //        //collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
+        print("the user type is\(curUserType)")
+        if (curUserType == UserType.consumer){
+            self.header.text = featureAr[row]
+        } else {
+            self.header.text = bizHeader[row]
+        }
         self.row = row
         self.collectionView.tag = row
-        self.header.text = featureAr[row]
         self.collectionView.reloadData()
+        
     }
 }
 
