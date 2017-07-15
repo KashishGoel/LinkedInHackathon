@@ -38,7 +38,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        FirebaseManager.getRequests()
+    }
 
 
 }
@@ -52,7 +55,7 @@ extension HomeVC {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         if let cell = tableView.dequeueReusableCell(withIdentifier: LocalizedText.collectionTableCellID) as? AuctionTableViewCell {
-                cell.configure(row: indexPath.row)
+            cell.configure(row: indexPath.row, user:user)
             return cell
         } else {
             return UITableViewCell()

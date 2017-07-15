@@ -23,6 +23,7 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     var timeLeftAr = [["22 hours","8 days","10 days"],["3 days","2 days","1 days"],["13 days","11 days","4 days"]]
     var imageViewAr = [[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")],[UIImage(named:"class"),UIImage(named:"clam"),UIImage(named:"casual")],[UIImage(named:"doc"),UIImage(named:"lr"),UIImage(named:"pair")]]
     var companyLogoAr = [[UIImage(named:"appl"),UIImage(named:"go"),UIImage(named:"sf")],[UIImage(named:"citi"),UIImage(named:"camp"),UIImage(named:"ge")],[UIImage(named:"stnf"),UIImage(named:"go"),UIImage(named:"uda")]]
+    var requests = ["Big Cities": ["timeLeft": "22 hours left", "company": "Apple", "price": "$1000"], "Man's Best Friend": ["timeLeft": "18 hours left", "company": "Apple", "price": "$700"], "Fruit Smoothies": ["timeLeft": "Completed", "company": "Apple", "price": "$200"], "Summer Beach Day": ["timeLeft": "Completed", "company": "Apple", "price": "$700"]]
     
     func configure(row:Int, cell:Int) {
         print("configuring")
@@ -32,7 +33,17 @@ class AuctionCollectionViewCell: UICollectionViewCell {
         imageView.image = imageViewAr[row][cell]
         companyLogo.image = companyLogoAr[row][cell]
         price.text = priceAr[row][cell]
-        
+    }
+    
+    func getBusinessRequest(name: String) {
+        let req = requests[name]
+        if (req != nil) {
+            company.text = req["company"];
+            place.text = name
+            timeLeft.text = req["timeLeft"]
+            imageView.image = nil
+            price.text = req["price"]
+        }
     }
 
 }

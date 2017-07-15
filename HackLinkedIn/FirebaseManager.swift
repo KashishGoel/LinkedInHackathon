@@ -108,6 +108,25 @@ class FirebaseManager {
         return requests
     }
     
+    static func getRequests() {
+        var requests:[Request] = []
+        let userID = FirebaseManager.currentUserID
+        FirebaseNodes.businesses.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                print(snapshots)
+                for snap in snapshots {
+                    if let requestDictionary = snap.value as? Dictionary <String, AnyObject> {
+                        let request = Request(requestDictionary: requestDictionary)
+                        requests.append(request)
+                    }
+                }
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     
 }
 
