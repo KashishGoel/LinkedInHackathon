@@ -20,6 +20,7 @@ class AuctionTableViewCell: UITableViewCell {
     var priceAr = ["$999", "$100", "$750"]
     var timeLeftAr = ["5 days","8 days","10 days"]
     var featureAr = ["Featured", "Recommended", "New"]
+    var bizFeatureAr = ["Active", "Past Contests" ,"Others"]
     var imageViewAr = [UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")]
     
     var businessActive = ["Big Cities", "Man's Best Friend"]
@@ -82,23 +83,19 @@ class AuctionTableViewCell: UITableViewCell {
 //}
 
 extension AuctionTableViewCell {
-    if (user == .consumer) {
     func configure(row:Int, user:Bool) {
 //        let nib = UINib(nibName: LocalizedText.collectionCell, bundle: nil)
 //        //collectionView.register(nib, forCellWithReuseIdentifier: LocalizedText.collectionCellID)
 //       self.collectionView.register(AuctionCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: LocalizedText.collectionCellID)
         self.row = row
         self.collectionView.tag = row
-        self.header.text = featureAr[row]
+        if (user) {
+            self.header.text = featureAr[row]
+        } else {
+            self.header.text = bizFeatureAr[row]
         }
-    } else {
-        func getBusinessRequest(name: String) {
-            self.row = row
-            self.collectionView.tag = row
-            self.header.text = placeAr[row]
-        }
+        self.collectionView.reloadData()
     }
-    self.collectionView.reloadData()
 }
 
 extension AuctionTableViewCell {

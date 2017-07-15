@@ -23,26 +23,27 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     var timeLeftAr = [["22 hours","8 days","10 days"],["3 days","2 days","1 days"],["13 days","11 days","4 days"]]
     var imageViewAr = [[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")],[UIImage(named:"class"),UIImage(named:"clam"),UIImage(named:"casual")],[UIImage(named:"doc"),UIImage(named:"lr"),UIImage(named:"pair")]]
     var companyLogoAr = [[UIImage(named:"appl"),UIImage(named:"go"),UIImage(named:"sf")],[UIImage(named:"citi"),UIImage(named:"camp"),UIImage(named:"ge")],[UIImage(named:"stnf"),UIImage(named:"go"),UIImage(named:"uda")]]
-    var requests = ["Big Cities": ["timeLeft": "22 hours left", "company": "Apple", "price": "$1000"], "Man's Best Friend": ["timeLeft": "18 hours left", "company": "Apple", "price": "$700"], "Fruit Smoothies": ["timeLeft": "Completed", "company": "Apple", "price": "$200"], "Summer Beach Day": ["timeLeft": "Completed", "company": "Apple", "price": "$700"]]
+    var bizCompanyAr = [["Apple", "Apple"], ["Apple", "Apple"]]
+    var bizNameArr = [["Big Cities", "Man's Best Friend"], ["Fruit Smoothies", "Summer Beach Day"]]
+    var bizTimeLeft = [["22 hours left", "18 hours left"], ["Completed", "Completed"]]
+    var bizPrice = [["$1000", "$700"], ["$200", "$700"]]
+    var businessReqs = ["Big Cities", "Man's Best Friend", "Fruit Smoothies", "Summer Beach Day"]
     
-    func configure(row:Int, cell:Int) {
-        print("configuring")
-        company.text = companyAr[row][cell]
-        place.text = placeAr[row][cell]
-        timeLeft.text = timeLeftAr[row][cell]
-        imageView.image = imageViewAr[row][cell]
-        companyLogo.image = companyLogoAr[row][cell]
-        price.text = priceAr[row][cell]
-    }
-    
-    func getBusinessRequest(name: String) {
-        let req = requests[name]
-        if (req != nil) {
-            company.text = req["company"];
-            place.text = name
-            timeLeft.text = req["timeLeft"]
-            imageView.image = nil
-            price.text = req["price"]
+    func configure(row:Int, cell:Int, user:Bool) {
+        if (user) {
+            print("configuring")
+            company.text = companyAr[row][cell]
+            place.text = placeAr[row][cell]
+            timeLeft.text = timeLeftAr[row][cell]
+            imageView.image = imageViewAr[row][cell]
+            companyLogo.image = companyLogoAr[row][cell]
+            price.text = priceAr[row][cell]
+        } else {
+                company.text = bizCompanyAr[row][cell];
+                place.text = bizNameArr[row][cell];
+                timeLeft.text = bizTimeLeft[row][cell];
+                imageView.image = imageViewAr[row][cell]
+                price.text = bizPrice[row][cell];
         }
     }
 
