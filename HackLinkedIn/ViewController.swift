@@ -45,10 +45,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
 
 extension HomeVC {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -68,7 +64,8 @@ extension HomeVC {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: LocalizedText.contestDetailsVCID)
+        self.present(vc!, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView,

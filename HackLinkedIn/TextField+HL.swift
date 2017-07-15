@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+let shadowColor:CGFloat = 157.0/255.0
 class MaterialTextField: UITextField {
-    let shadowColor:CGFloat = 157.0/255.0
+    
     
     override func awakeFromNib() {
         layer.cornerRadius = 2.0
