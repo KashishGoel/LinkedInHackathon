@@ -40,10 +40,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 extension HomeVC {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
