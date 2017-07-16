@@ -17,6 +17,7 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+
     var placeAr = [["Big Cities", "Action Bike shot", "Golden Gate"],["Learning in Class", "Clam Chowder", "Business Casual"],["Doctors and Medicine", "Long Distance Running", "Pair Programming"]]
     var companyAr = [["Apple", "Google", "Salesforce"],["Citi Bank", "Campbells", "GE"],["Stanford", "Google", "Udacity"]]
     var priceAr = [["$450", "$100", "$750"],["$500", "$100", "$300"],["$250", "$100", "$50"]]
@@ -24,7 +25,7 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     var imageViewAr = [[UIImage(named:"city"),UIImage(named:"bike"),UIImage(named:"ggb")],[UIImage(named:"class"),UIImage(named:"clam"),UIImage(named:"casual")],[UIImage(named:"doc"),UIImage(named:"lr"),UIImage(named:"pair")]]
     var companyLogoAr = [[UIImage(named:"appl"),UIImage(named:"go"),UIImage(named:"sf")],[UIImage(named:"citi"),UIImage(named:"camp"),UIImage(named:"ge")],[UIImage(named:"stnf"),UIImage(named:"go"),UIImage(named:"uda")]]
     
-    func configure(row:Int, cell:Int) {
+    func configure(row:Int, cell:Int, user:UserType) {
         print("configuring")
         if cell == 3 {
             company.text = "Apple "

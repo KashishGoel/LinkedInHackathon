@@ -34,6 +34,7 @@
 		36E6F3621F1AA0320022DA08 /* LegalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6F3611F1AA0320022DA08 /* LegalVC.swift */; };
 		36E6F3641F1AA5B40022DA08 /* SubmissionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E6F3631F1AA5B40022DA08 /* SubmissionsVC.swift */; };
 		51FED8AE03AC2FF34492E485 /* Pods_HackLinkedIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E462E6B1157F372CF01A7C2 /* Pods_HackLinkedIn.framework */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +63,12 @@
 		36867AC51F1A49A200F26D9C /* UIButton+HL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+HL.swift"; sourceTree = "<group>"; };
 		36867AC71F1A52CE00F26D9C /* ContestDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDetailsVC.swift; sourceTree = "<group>"; };
 		36E6F35B1F1A73410022DA08 /* Initial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
+
 		36E6F35D1F1A79BF0022DA08 /* CreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
 		36E6F35F1F1A7C8A0022DA08 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		36E6F3611F1AA0320022DA08 /* LegalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalVC.swift; sourceTree = "<group>"; };
 		36E6F3631F1AA5B40022DA08 /* SubmissionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionsVC.swift; sourceTree = "<group>"; };
+
 		5C06B7977CCBFC03C2F6B038 /* Pods-HackLinkedIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackLinkedIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackLinkedIn/Pods-HackLinkedIn.release.xcconfig"; sourceTree = "<group>"; };
 		7E462E6B1157F372CF01A7C2 /* Pods_HackLinkedIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackLinkedIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +159,7 @@
 				36E6F35F1F1A7C8A0022DA08 /* ContainerVC.swift */,
 				36E6F3611F1AA0320022DA08 /* LegalVC.swift */,
 				36E6F3631F1AA5B40022DA08 /* SubmissionsVC.swift */,
+
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -350,7 +354,9 @@
 				36E6F3601F1A7C8A0022DA08 /* ContainerVC.swift in Sources */,
 				36867A8E1F19DD0500F26D9C /* ViewController.swift in Sources */,
 				36E6F35C1F1A73410022DA08 /* Initial.swift in Sources */,
+
 				36E6F35E1F1A79BF0022DA08 /* CreateVC.swift in Sources */,
+
 				36867AB51F1A059F00F26D9C /* User.swift in Sources */,
 				36867AAA1F19EB4300F26D9C /* FirebaseManager.swift in Sources */,
 				36E6F3641F1AA5B40022DA08 /* SubmissionsVC.swift in Sources */,
