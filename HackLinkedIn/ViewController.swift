@@ -32,10 +32,35 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
         
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func refresh(_ refreshControl: UIRefreshControl) {
+        // Do your job, when done:
+        FirebaseManager.getNewEntryTrue()
+        print(UserDefaults.standard.bool(forKey: "newEntry"))
+        tableView.reloadData()
+        FirebaseManager.getShowAlert()
+        
+        if (UserDefaults.standard.bool(forKey: "showAlert")) {
+            let vc = UIAlertController(title: "Congrats", message: "Apple selected your image! Your money is on the way", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
+            
+            vc.addAction(action)
+            
+            self.present(vc, animated: true, completion: nil)
+        }
+        refreshControl.endRefreshing()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,12 +70,23 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
             }
             
         }
+        FirebaseManager.getNewEntryTrue()
         SVProgressHUD.show()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             FirebaseManager.getNewEntryTrue()
-            print(FirebaseManager.newEntry)
+            FirebaseManager.getShowAlert()
+            print(UserDefaults.standard.bool(forKey: "newEntry"))
             SVProgressHUD.dismiss()
         })
+        
+        if (UserDefaults.standard.bool(forKey: "showAlert")) {
+            let vc = UIAlertController(title: "Congrats", message: "Apple selected your image! Your money is on the way", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
+            
+            vc.addAction(action)
+            
+            self.present(vc, animated: true, completion: nil)
+        }
         
         
     }
@@ -68,6 +104,21 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICo
         self.present(vc!, animated: false, completion: nil)
     }
 
+    @IBAction func discoverButtonTapped(_ sender: UIButton) {
+        FirebaseManager.getNewEntryTrue()
+        print(UserDefaults.standard.bool(forKey: "newEntry"))
+        tableView.reloadData()
+        FirebaseManager.getShowAlert()
+        
+        if (UserDefaults.standard.bool(forKey: "showAlert")) {
+            let vc = UIAlertController(title: "Congrats", message: "Apple selected your image! Your money is on the way", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .destructive, handler: nil)
+            
+            vc.addAction(action)
+            
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 
 }
 
@@ -92,8 +143,16 @@ extension HomeVC {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: LocalizedText.contestDetailsVCID)
-        self.present(vc!, animated: true, completion: nil)
+        
+        if user == .business {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubmissionsVCID")
+            self.present(vc!, animated: true, completion: nil)
+            
+        } else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: LocalizedText.contestDetailsVCID)
+            self.present(vc!, animated: true, completion: nil)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -108,6 +167,12 @@ extension HomeVC {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if(UserDefaults.standard.bool(forKey: "newEntry") == true ){
+            if section == 0 {
+                return 4
+            }
+        }
         return 3
     }
     

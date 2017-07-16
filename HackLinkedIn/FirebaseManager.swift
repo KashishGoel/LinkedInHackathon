@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class FirebaseManager {
-    static var newEntry = false
+
     static var currentUserID: String {
         get {
             if let currentUser = FIRAuth.auth()?.currentUser {
@@ -114,11 +114,28 @@ class FirebaseManager {
         FirebaseManager.getNewEntryTrue()
     }
     
+    static func setShowAlert() {
+        FirebaseNodes.showAlert.setValue(true)
+    }
+    
+    static func getShowAlert() {
+        let userID = FirebaseManager.currentUserID
+        FirebaseManager.ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            UserDefaults.standard.set(value?["showAlert"] as? Bool ?? false, forKey: "showAlert")
+            
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
     static func getNewEntryTrue() {
         let userID = FirebaseManager.currentUserID
         FirebaseManager.ref.observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            FirebaseManager.newEntry = value?["showNewEntry"] as? Bool ?? false
+            UserDefaults.standard.set(value?["showNewEntry"] as? Bool ?? false, forKey: "newEntry")
+            
             
         }) { (error) in
             print(error.localizedDescription)

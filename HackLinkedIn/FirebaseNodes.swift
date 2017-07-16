@@ -20,4 +20,6 @@ class FirebaseNodes {
     
     static let newEntry = FirebaseManager.ref.child("showNewEntry")
     
+    static let showAlert = FirebaseManager.ref.child("showAlert")
+    
 }
