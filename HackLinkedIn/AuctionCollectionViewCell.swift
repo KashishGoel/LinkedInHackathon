@@ -27,6 +27,15 @@ class AuctionCollectionViewCell: UICollectionViewCell {
     
     func configure(row:Int, cell:Int, user:UserType) {
         print("configuring")
+        if cell == 3 {
+            company.text = "Apple "
+            place.text = "Big Cities"
+            timeLeft.text = "1 Day"
+            imageView.image = UIImage(named: "abc")
+            companyLogo.image = UIImage(named:"appl")
+            price.text = "$750"
+            return
+        }
         company.text = companyAr[row][cell]
         place.text = placeAr[row][cell]
         timeLeft.text = timeLeftAr[row][cell]
@@ -35,5 +44,9 @@ class AuctionCollectionViewCell: UICollectionViewCell {
         price.text = priceAr[row][cell]
         
     }
-
+    
+    
+    
+    
+    
 }
